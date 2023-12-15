@@ -1,4 +1,4 @@
-package ltennstedt.doctorwhoapp.backend;
+package doctorwhoapp.backend;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
