@@ -20,7 +20,6 @@ jobs:
     - name: Build
       working-directory: ${{env.working-directory}}
       run: mvn -B install
-    - name: Update dependency graph
-      uses: advanced-security/maven-dependency-submission-action@v3
-      with:
-        directory: ${{env.working-directory}}
+    - name: Site
+      working-directory: ${{env.working-directory}}
+      run: mvn -B site
