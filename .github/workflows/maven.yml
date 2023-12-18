@@ -1,0 +1,33 @@
+name: Java CI with Maven
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./backend
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'liberica'
+        cache: maven
+    - name: Validating
+      run: mvn -B validate
+    - name: Compilation
+      run: mvn -B compile
+    - name: Testing
+      run: mvn -B test
+    - name: Package
+      run: mvn -B package
+    - name: Verifying
+      run: mvn -B verify
+    - name: Installation
+      run: mvn -B install
+    - name: Update dependency graph
+      uses: advanced-security/maven-dependency-submission-action@v3
