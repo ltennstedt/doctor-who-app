@@ -6,7 +6,7 @@ START WITH
 CREATE
     TABLE
         doctor(
-            id BIGINT NOT NULL,
+            id INTEGER NOT NULL,
             incarnation_number INTEGER NOT NULL,
             incarnation_name VARCHAR(255) NOT NULL,
             slogan VARCHAR(255),
@@ -18,11 +18,11 @@ CREATE
             ),
             english_wikipedia_url VARCHAR(255) NOT NULL,
             german_wikipedia_url VARCHAR(255) NOT NULL,
-            predecessor_id BIGINT UNIQUE,
-            successor_id BIGINT UNIQUE,
+            predecessor_id INTEGER UNIQUE,
+            successor_id INTEGER UNIQUE,
             created_on TIMESTAMP(6) WITH TIME ZONE NOT NULL,
             updated_on TIMESTAMP(6) WITH TIME ZONE NOT NULL,
-            version BIGINT NOT NULL,
+            version INTEGER NOT NULL,
             PRIMARY KEY(id)
         );
 
@@ -40,7 +40,7 @@ START WITH
 CREATE
     TABLE
         companion(
-            id BIGINT NOT NULL,
+            id INTEGER NOT NULL,
             species VARCHAR(255) NOT NULL CHECK(
                 species IN(
                     'GALLIFREYAN',
@@ -63,15 +63,15 @@ CREATE
             german_wikipedia_url VARCHAR(255) NOT NULL,
             created_on TIMESTAMP(6) WITH TIME ZONE NOT NULL,
             updated_on TIMESTAMP(6) WITH TIME ZONE NOT NULL,
-            version BIGINT NOT NULL,
+            version INTEGER NOT NULL,
             PRIMARY KEY(id)
         );
 
 CREATE
     TABLE
         companion_doctors(
-            companion_id BIGINT NOT NULL,
-            doctor_id BIGINT NOT NULL,
+            companion_id INTEGER NOT NULL,
+            doctor_id INTEGER NOT NULL,
             UNIQUE(
                 companion_id,
                 doctor_id

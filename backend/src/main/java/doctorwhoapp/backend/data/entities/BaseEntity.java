@@ -13,7 +13,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 public abstract class BaseEntity {
     @Id
     @GeneratedValue
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false)
     private String englishWikipediaUrl;
@@ -30,13 +30,13 @@ public abstract class BaseEntity {
     private Instant updatedOn;
 
     @Version
-    private long version;
+    private int version;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(final Long id) {
+    public void setId(final Integer id) {
         this.id = id;
     }
 
@@ -72,11 +72,11 @@ public abstract class BaseEntity {
         this.updatedOn = updatedOn;
     }
 
-    public long getVersion() {
+    public int getVersion() {
         return version;
     }
 
-    public void setVersion(final long version) {
+    public void setVersion(final int version) {
         this.version = version;
     }
 }
