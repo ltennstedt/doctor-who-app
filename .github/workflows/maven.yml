@@ -19,7 +19,4 @@ jobs:
         cache: maven
     - name: Build
       working-directory: ${{env.working-directory}}
-      run: mvn -B install
-    - name: Site
-      working-directory: ${{env.working-directory}}
-      run: mvn -B site
+      run: mvn -B install site
