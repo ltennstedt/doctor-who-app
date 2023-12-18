@@ -17,23 +17,10 @@ jobs:
         java-version: '17'
         distribution: 'liberica'
         cache: maven
-    - name: Validating
-      working-directory: ${{env.working-directory}}
-      run: mvn -B validate
-    - name: Compilation
-      working-directory: ${{env.working-directory}}
-      run: mvn -B compile
-    - name: Testing
-      working-directory: ${{env.working-directory}}
-      run: mvn -B test
-    - name: Package
-      working-directory: ${{env.working-directory}}
-      run: mvn -B package
-    - name: Verifying
-      working-directory: ${{env.working-directory}}
-      run: mvn -B verify
-    - name: Installation
+    - name: Build
       working-directory: ${{env.working-directory}}
       run: mvn -B install
     - name: Update dependency graph
       uses: advanced-security/maven-dependency-submission-action@v3
+      with:
+        directory: ${{env.working-directory}}
