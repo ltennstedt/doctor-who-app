@@ -1,5 +1,6 @@
 name: Java CI with 
 permissions:
+  id-token: write
   pages: write
 on:
   push:
@@ -27,11 +28,11 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    - name: Set up JDK 17
+    - name: Set up JDK
       uses: actions/setup-java@v3
       with:
         java-version: '17'
-        distribution: 'temurin'
+        distribution: 'liberica'
         cache: maven
     - name: Build
       working-directory: ${{env.working-directory}}
