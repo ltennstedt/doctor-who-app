@@ -3,6 +3,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
+      - '.github/workflows/maven.yml'
       - 'backend'
       - '!backend/.editorconfig'
       - '!backend/.gitignore'
@@ -10,6 +11,7 @@ on:
   pull_request:
     branches: [ "main" ]
     paths:
+      - '.github/workflows/maven.yml'
       - 'backend'
       - '!backend/.editorconfig'
       - '!backend/.gitignore'
@@ -21,6 +23,12 @@ jobs:
     env:
       working-directory: backend
     steps:
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
     - uses: actions/checkout@v3
     - name: Build
       working-directory: ${{env.working-directory}}
