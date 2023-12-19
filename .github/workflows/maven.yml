@@ -1,4 +1,8 @@
 name: Java CI with Maven
+permissions:
+  contents: write
+  id-token: write
+  pages: write
 on:
   push:
     branches: [ "main" ]
