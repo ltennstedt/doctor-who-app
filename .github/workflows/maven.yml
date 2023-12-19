@@ -1,7 +1,4 @@
-name: Java CI with 
-permissions:
-  id-token: write
-  pages: write
+name: Java CI with Maven
 on:
   push:
     branches: [ "main" ]
@@ -37,9 +34,7 @@ jobs:
     - name: Build
       working-directory: ${{env.working-directory}}
       run: mvn -B install site
-    - name: Upload GitHub Pages artifact
-      uses: actions/upload-pages-artifact@v2
+    - name: GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v4
       with:
-        path: backend/target/site
-    - name: Deploy GitHub Pages site
-      uses: actions/deploy-pages@v3
+        build_dir: backend/target/site
