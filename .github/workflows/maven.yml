@@ -36,7 +36,7 @@ jobs:
       run: mvn -B install site
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v2
-        with:
-          path: backend/target/site
+      with:
+        path: backend/target/site
     - name: Deploy GitHub Pages site
       uses: actions/deploy-pages@v3
