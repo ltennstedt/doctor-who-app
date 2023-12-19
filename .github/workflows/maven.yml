@@ -36,7 +36,7 @@ jobs:
         cache: maven
     - name: Build
       working-directory: ${{env.working-directory}}
-      run: mvn -B install site
+      run: mvn -B install sonar:sonar site
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v4
       with:
