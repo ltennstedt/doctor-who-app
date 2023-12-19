@@ -1,4 +1,6 @@
-name: Java CI with Maven
+name: Java CI with 
+permissions:
+  pages: write
 on:
   push:
     branches: [ "main" ]
