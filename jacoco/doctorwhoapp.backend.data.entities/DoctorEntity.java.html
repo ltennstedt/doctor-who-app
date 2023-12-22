@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DoctorEntity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Doctor Who App Backend</a> &gt; <a href="index.source.html" class="el_package">doctorwhoapp.backend.data.entities</a> &gt; <span class="el_source">DoctorEntity.java</span></div><h1>DoctorEntity.java</h1><pre class="source lang-java linenums">package doctorwhoapp.backend.data.entities;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.OneToOne;
+
+@Entity(name = &quot;Doctor&quot;)
+<span class="fc" id="L9">public class DoctorEntity extends PersonEntity {</span>
+    private int incarnationNumber;
+
+    @Column(nullable = false)
+    private String incarnationName;
+
+    private String slogan;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    private DoctorEntity predecessor;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    private DoctorEntity successor;
+
+    public int getIncarnationNumber() {
+<span class="nc" id="L24">        return incarnationNumber;</span>
+    }
+
+    public void setIncarnationNumber(final int incarnationNumber) {
+<span class="nc" id="L28">        this.incarnationNumber = incarnationNumber;</span>
+<span class="nc" id="L29">    }</span>
+
+    public String getIncarnationName() {
+<span class="nc" id="L32">        return incarnationName;</span>
+    }
+
+    public void setIncarnationName(final String incarnationName) {
+<span class="nc" id="L36">        this.incarnationName = incarnationName;</span>
+<span class="nc" id="L37">    }</span>
+
+    public String getSlogan() {
+<span class="nc" id="L40">        return slogan;</span>
+    }
+
+    public void setSlogan(final String slogan) {
+<span class="nc" id="L44">        this.slogan = slogan;</span>
+<span class="nc" id="L45">    }</span>
+
+    public DoctorEntity getPredecessor() {
+<span class="nc" id="L48">        return predecessor;</span>
+    }
+
+    public void setPredecessor(final DoctorEntity predecessor) {
+<span class="nc" id="L52">        this.predecessor = predecessor;</span>
+<span class="nc" id="L53">    }</span>
+
+    public DoctorEntity getSuccessor() {
+<span class="nc" id="L56">        return successor;</span>
+    }
+
+    public void setSuccessor(final DoctorEntity successor) {
+<span class="nc" id="L60">        this.successor = successor;</span>
+<span class="nc" id="L61">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

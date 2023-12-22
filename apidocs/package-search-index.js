@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"doctorwhoapp.backend"},{"l":"doctorwhoapp.backend.data.entities"},{"l":"doctorwhoapp.backend.data.repositories"},{"l":"doctorwhoapp.backend.domain"}];updateSearchResults();

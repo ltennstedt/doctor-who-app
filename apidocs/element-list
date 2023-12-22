@@ -1,0 +1,4 @@
+doctorwhoapp.backend
+doctorwhoapp.backend.data.entities
+doctorwhoapp.backend.data.repositories
+doctorwhoapp.backend.domain
