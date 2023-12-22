@@ -42,11 +42,6 @@
     <system>GitHub</system>
     <url>https://github.com/ltennstedt/doctor-who-app/actions</url>
   </ciManagement>
-  <properties>
-    <sonar.projectKey>ltennstedt_doctor-who-app</sonar.projectKey>
-    <sonar.organization>ltennstedt-github</sonar.organization>
-    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -201,11 +196,6 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.sonarsource.scanner.maven</groupId>
-        <artifactId>sonar-maven-plugin</artifactId>
-        <version>3.9.1.2184</version>
       </plugin>
       <plugin>
         <groupId>org.springframework.boot</groupId>
