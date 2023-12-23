@@ -7,7 +7,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public class PersonEntity extends BaseEntity {
+public class PersonEntity extends AbstractEntity {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Gender gender;

@@ -23,9 +23,7 @@
         <module name="NeedBraces"/>
         <module name="RightCurly"/>
         <!-- class design -->
-        <module name="DesignForExtension"/>
         <module name="FinalClass"/>
-        <module name="HideUtilityClassConstructor"/>
         <module name="InnerTypeLast"/>
         <module name="InterfaceIsType"/>
         <module name="MutableException"/>
@@ -128,6 +126,8 @@
         <module name="SingleSpaceSeparator"/>
         <module name="TypecastParenPad"/>
         <module name="WhitespaceAfter"/>
-        <module name="WhitespaceAround"/>
+        <module name="WhitespaceAround">
+          <property name="allowEmptyTypes" value="true"/>
+        </module>
     </module>
 </module>

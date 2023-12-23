@@ -2,7 +2,7 @@ package doctorwhoapp.backend.domain;
 
 import doctorwhoapp.backend.enums.Gender;
 
-public class Person extends BaseModel {
+public class Person extends AbstractModel {
     private Gender gender;
 
     public Gender getGender() {

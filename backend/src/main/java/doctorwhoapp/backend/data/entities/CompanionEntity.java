@@ -2,7 +2,14 @@ package doctorwhoapp.backend.data.entities;
 
 import doctorwhoapp.backend.enums.Planet;
 import doctorwhoapp.backend.enums.Species;
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.UniqueConstraint;
 import java.util.List;
 
 @Entity(name = "Companion")

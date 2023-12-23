@@ -10,7 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @MappedSuperclass
-public abstract class BaseEntity {
+public abstract class AbstractEntity {
     @Id
     @GeneratedValue
     private Integer id;

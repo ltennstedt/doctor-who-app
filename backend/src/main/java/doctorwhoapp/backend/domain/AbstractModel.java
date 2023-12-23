@@ -1,6 +1,6 @@
 package doctorwhoapp.backend.domain;
 
-public class BaseModel {
+public abstract class AbstractModel {
     private Integer id;
     private String englishWikipediaUrl;
     private String germanWikipediaUrl;
