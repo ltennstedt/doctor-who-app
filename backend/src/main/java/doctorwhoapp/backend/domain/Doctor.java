@@ -1,5 +1,8 @@
 package doctorwhoapp.backend.domain;
 
+import doctorwhoapp.backend.enums.Planet;
+import doctorwhoapp.backend.enums.Species;
+
 public class Doctor extends Person {
     private int incarnationNumber;
     private String incarnationName;

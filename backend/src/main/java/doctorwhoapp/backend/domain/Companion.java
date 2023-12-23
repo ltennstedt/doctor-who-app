@@ -1,6 +1,8 @@
 package doctorwhoapp.backend.domain;
 
 import doctorwhoapp.backend.data.entities.DoctorEntity;
+import doctorwhoapp.backend.enums.Planet;
+import doctorwhoapp.backend.enums.Species;
 import java.util.List;
 
 public class Companion extends Person {

@@ -1,5 +1,7 @@
 package doctorwhoapp.backend.domain;
 
+import doctorwhoapp.backend.enums.Gender;
+
 public class Person extends BaseModel {
     private Gender gender;
 

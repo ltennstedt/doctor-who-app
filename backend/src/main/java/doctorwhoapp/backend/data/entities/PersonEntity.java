@@ -1,6 +1,6 @@
 package doctorwhoapp.backend.data.entities;
 
-import doctorwhoapp.backend.domain.Gender;
+import doctorwhoapp.backend.enums.Gender;
 import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

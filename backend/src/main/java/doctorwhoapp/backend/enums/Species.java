@@ -1,4 +1,4 @@
-package doctorwhoapp.backend.domain;
+package doctorwhoapp.backend.enums;
 
 public enum Species {
     GALLIFREYAN,
