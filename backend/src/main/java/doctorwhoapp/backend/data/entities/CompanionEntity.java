@@ -12,7 +12,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.UniqueConstraint;
 import java.util.List;
 
-@Entity(name = "Companion")
+@Entity(name = "CompanionDto")
 public class CompanionEntity extends PersonEntity {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)

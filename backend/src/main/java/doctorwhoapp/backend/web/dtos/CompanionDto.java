@@ -1,16 +1,15 @@
-package doctorwhoapp.backend.domain;
+package doctorwhoapp.backend.web.dtos;
 
 import doctorwhoapp.backend.enums.Planet;
 import doctorwhoapp.backend.enums.Species;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import java.util.List;
 
-public class Companion extends Person {
+public class CompanionDto extends PersonDto {
     private @NotNull Species species;
     private @NotNull Planet homePlanet;
-    private @NotEmpty List<@NotNull @Valid Doctor> doctors;
+    private @NotEmpty List<@NotNull Integer> doctorIds;
 
     public Species getSpecies() {
         return species;
@@ -28,11 +27,11 @@ public class Companion extends Person {
         this.homePlanet = homePlanet;
     }
 
-    public List<Doctor> getDoctors() {
-        return doctors;
+    public List<Integer> getDoctorIds() {
+        return doctorIds;
     }
 
-    public void setDoctors(final List<Doctor> doctors) {
-        this.doctors = doctors;
+    public void setDoctorIds(final List<Integer> doctorIds) {
+        this.doctorIds = doctorIds;
     }
 }

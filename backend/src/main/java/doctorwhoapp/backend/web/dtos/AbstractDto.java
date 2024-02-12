@@ -1,9 +1,9 @@
-package doctorwhoapp.backend.domain;
+package doctorwhoapp.backend.web.dtos;
 
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.URL;
 
-public abstract class AbstractModel {
+public abstract class AbstractDto {
     private Integer id;
     private @NotNull @URL String englishWikipediaUrl;
     private @NotNull @URL String germanWikipediaUrl;

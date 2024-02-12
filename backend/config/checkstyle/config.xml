@@ -15,6 +15,7 @@
         <module name="AnnotationUseStyle"/>
         <module name="MissingDeprecated"/>
         <module name="MissingOverride"/>
+
         <!-- blocks -->
         <module name="AvoidNestedBlocks"/>
         <module name="EmptyBlock"/>
@@ -22,6 +23,7 @@
         <module name="LeftCurly"/>
         <module name="NeedBraces"/>
         <module name="RightCurly"/>
+
         <!-- class design -->
         <module name="FinalClass"/>
         <module name="InnerTypeLast"/>
@@ -29,6 +31,7 @@
         <module name="MutableException"/>
         <module name="OneTopLevelClass"/>
         <module name="VisibilityModifier"/>
+
         <!-- coding -->
         <module name="AvoidDoubleBraceInitialization"/>
         <module name="CovariantEquals"/>
@@ -67,10 +70,12 @@
         <module name="UnnecessarySemicolonInEnumeration"/>
         <module name="UnnecessarySemicolonInTryWithResources"/>
         <module name="VariableDeclarationUsageDistance"/>
+
         <!-- imports -->
         <module name="AvoidStarImport"/>
         <module name="RedundantImport"/>
         <module name="UnusedImports"/>
+
         <!-- Javadoc comments -->
         <module name="InvalidJavadocPosition"/>
         <module name="JavadocContentLocationCheck"/>
@@ -78,12 +83,14 @@
         <module name="JavadocMissingWhitespaceAfterAsterisk"/>
         <module name="JavadocTagContinuationIndentation"/>
         <module name="NonEmptyAtclauseDescription"/>
+
         <!-- metrics -->
         <module name="BooleanExpressionComplexity"/>
         <module name="ClassDataAbstractionCoupling"/>
         <module name="ClassFanOutComplexity"/>
         <module name="CyclomaticComplexity"/>
         <module name="NPathComplexity"/>
+
         <!-- miscellaneous -->
         <module name="ArrayTypeStyle"/>
         <module name="CommentsIndentation"/>
@@ -93,14 +100,18 @@
         <module name="OuterTypeFilename"/>
         <module name="TrailingComment"/>
         <module name="UpperEll"/>
+
         <!-- modifiers -->
         <module name="ClassMemberImpliedModifier"/>
         <module name="ModifierOrder"/>
         <module name="RedundantModifier"/>
+
         <!-- naming conventions -->
         <module name="AbstractClassName"/>
         <module name="CatchParameterName"/>
-        <module name="ClassTypeParameterName"/>
+        <module name="ClassTypeParameterName">
+          <property name="format" value="^[A-Z]{1,2}$"/>
+        </module>
         <module name="ConstantName"/>
         <module name="IllegalIdentifierName"/>
         <module name="InterfaceTypeParameterName"/>
@@ -115,6 +126,7 @@
         <module name="RecordTypeParameterName"/>
         <module name="StaticVariableName"/>
         <module name="TypeName"/>
+
         <!-- whitespace -->
         <module name="EmptyForInitializerPad"/>
         <module name="EmptyForIteratorPad"/>

@@ -1,16 +1,16 @@
-package doctorwhoapp.backend.domain;
+package doctorwhoapp.backend.web.dtos;
 
 import doctorwhoapp.backend.enums.Planet;
 import doctorwhoapp.backend.enums.Species;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 
-public class Doctor extends Person {
+public class DoctorDto extends PersonDto {
     private @Positive int incarnationNumber;
     private @NotBlank String incarnationName;
     private String slogan;
-    private Doctor predecessor;
-    private Doctor successor;
+    private Integer predecessor;
+    private Integer successor;
 
     public String getName() {
         return "The DoctorDto";
@@ -48,19 +48,19 @@ public class Doctor extends Person {
         this.slogan = slogan;
     }
 
-    public Doctor getPredecessor() {
+    public Integer getPredecessor() {
         return predecessor;
     }
 
-    public void setPredecessor(final Doctor predecessor) {
+    public void setPredecessor(final Integer predecessor) {
         this.predecessor = predecessor;
     }
 
-    public Doctor getSuccessor() {
+    public Integer getSuccessor() {
         return successor;
     }
 
-    public void setSuccessor(final Doctor successor) {
+    public void setSuccessor(finnalInteger successor) {
         this.successor = successor;
     }
 }

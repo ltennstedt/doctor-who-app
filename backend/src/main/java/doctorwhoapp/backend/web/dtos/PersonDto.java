@@ -1,9 +1,9 @@
-package doctorwhoapp.backend.domain;
+package doctorwhoapp.backend.web.dtos;
 
 import doctorwhoapp.backend.enums.Gender;
 import jakarta.validation.constraints.NotNull;
 
-public class Person extends AbstractModel {
+public class PersonDto extends AbstractDto {
     private @NotNull Gender gender;
 
     public Gender getGender() {

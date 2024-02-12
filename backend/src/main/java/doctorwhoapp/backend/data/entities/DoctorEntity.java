@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToOne;
 
-@Entity(name = "Doctor")
+@Entity(name = "DoctorDto")
 public class DoctorEntity extends PersonEntity {
     private int incarnationNumber;
 
