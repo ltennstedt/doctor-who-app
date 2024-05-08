@@ -1,20 +1,17 @@
-package doctorwhoapp.backend.web.dtos;
+package doctorwhoapp.backend.domain;
 
 import doctorwhoapp.backend.enums.Gender;
-import doctorwhoapp.backend.enums.Planet;
-import doctorwhoapp.backend.enums.Species;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 
-public final class DoctorDto extends PersonDto {
-    private static final String NAME = "The Doctor";
+public final class DoctorModel extends PersonModel {
     private final @Positive int incarnationNumber;
     private final @NotBlank String incarnationName;
     private final String slogan;
-    private final Integer predecessorId;
-    private final Integer successorId;
+    private final DoctorModel predecessor;
+    private final DoctorModel successor;
 
-    public DoctorDto(
+    public DoctorModel(
             final Integer id,
             final int incarnationNumber,
             final String incarnationName,
@@ -22,26 +19,22 @@ public final class DoctorDto extends PersonDto {
             final String slogan,
             final String englishWikipediaUrl,
             final String germanWikipediaUrl,
-            final Integer predecessorId,
-            final Integer successorId) {
+            final DoctorModel predecessor,
+            final DoctorModel successor) {
         super(id, gender, englishWikipediaUrl, germanWikipediaUrl);
         this.incarnationNumber = incarnationNumber;
         this.incarnationName = incarnationName;
         this.slogan = slogan;
-        this.predecessorId = predecessorId;
-        this.successorId = successorId;
+        this.predecessor = predecessor;
+        this.successor = successor;
     }
 
-    public String getName() {
-        return NAME;
+    public Integer getPredecessorId() {
+        return predecessor.getId();
     }
 
-    public Species getSpecies() {
-        return Species.GALLIFREYAN;
-    }
-
-    public Planet getHomePlanet() {
-        return Planet.GALLIFREY;
+    public Integer getSuccessorId() {
+        return successor.getId();
     }
 
     public int getIncarnationNumber() {
@@ -56,11 +49,11 @@ public final class DoctorDto extends PersonDto {
         return slogan;
     }
 
-    public Integer getPredecessorId() {
-        return predecessorId;
+    public DoctorModel getPredecessor() {
+        return predecessor;
     }
 
-    public Integer getSuccessorId() {
-        return successorId;
+    public DoctorModel getSuccessor() {
+        return successor;
     }
 }

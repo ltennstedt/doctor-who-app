@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-abstract class AbstractService<
+public abstract class AbstractService<
         R extends JpaRepository<E, Integer>,
         BM extends BusinessMapper<E, M>,
         E extends AbstractEntity,

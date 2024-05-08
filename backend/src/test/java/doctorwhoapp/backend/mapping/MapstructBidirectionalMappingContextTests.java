@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThatNullPointerException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class MapstructBidirectionalMappingContextTests {
+final class MapstructBidirectionalMappingContextTests {
     private MapstructBidirectionalMappingContext context;
 
     @BeforeEach

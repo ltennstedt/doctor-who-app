@@ -1,6 +1,7 @@
 package doctorwhoapp.backend.mapping;
 
 import com.google.common.annotations.VisibleForTesting;
+import java.util.Collections;
 import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +12,7 @@ import org.mapstruct.TargetType;
 import org.springframework.lang.NonNull;
 
 public final class MapstructBidirectionalMappingContext {
-    private final Map<Object, Object> knownInstances = new IdentityHashMap<>();
+    private final Map<Object, Object> knownInstances = Collections.synchronizedMap(new IdentityHashMap<>());
 
     @BeforeMapping
     public <S, T> T get(final @NonNull S source, @TargetType final @NonNull Class<T> targetType) {

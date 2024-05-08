@@ -107,7 +107,6 @@
         <module name="RedundantModifier"/>
 
         <!-- naming conventions -->
-        <module name="AbstractClassName"/>
         <module name="CatchParameterName"/>
         <module name="ClassTypeParameterName">
           <property name="format" value="^[A-Z]{1,2}$"/>
